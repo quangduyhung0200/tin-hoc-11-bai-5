@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1456a0">
+<meta name="description" content="Website luyện tập Tin học 11 - Bài 5: Kết nối máy tính với các thiết bị số.">
+<title>Tin học 11 | Bài 5 – Kết nối máy tính với các thiết bị số</title>
+<style>
+:root{--blue:#1557a6;--blue2:#2377d4;--navy:#102d52;--pale:#edf5ff;--ink:#1b2a3b;--muted:#68788b;--line:#dce6f2;--white:#fff;--green:#188653;--red:#c43d4b;--gold:#f4bd4f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f7fb;color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.55}
+button,input{font:inherit}button{cursor:pointer}.topbar{background:linear-gradient(115deg,#103b75,#1768bd 65%,#3a91e7);color:white;padding:28px 20px 44px}.wrap{width:min(1050px,100% - 32px);margin:auto}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.86rem;color:#dcecff}.pill{border:1px solid #ffffff55;border-radius:999px;padding:5px 11px}.hero{padding-top:27px;max-width:760px}.eyebrow{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:#c9e2ff;font-weight:800}.hero h1{font-size:clamp(1.8rem,4vw,3.1rem);line-height:1.12;margin:10px 0 12px;letter-spacing:-.035em}.hero p{max-width:650px;color:#e5f1ff;margin:0;font-size:1.02rem}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:12px;padding:11px 17px;font-weight:750;transition:transform .15s,filter .15s}.btn:hover{filter:brightness(.97);transform:translateY(-1px)}.btn-primary{background:var(--blue);color:white}.btn-white{background:white;color:var(--blue)}.btn-ghost{background:#eaf2fc;color:#214c80}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.main{margin-top:-22px;padding-bottom:45px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.panel,.card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 25px #1b3a5a08}.panel{padding:18px;position:sticky;top:16px}.panel h2{font-size:1rem;margin:0 0 12px}.nav-item{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:11px;color:#52657b;font-weight:650;margin:3px 0}.nav-item.active{background:var(--pale);color:var(--blue)}.nav-num{display:grid;place-items:center;width:27px;height:27px;border-radius:8px;background:#f0f4f9;font-size:.8rem}.nav-item.active .nav-num{background:var(--blue);color:white}.side-note{margin-top:18px;border-top:1px solid var(--line);padding-top:15px;color:var(--muted);font-size:.86rem}.content{min-width:0}.card{padding:clamp(18px,3vw,28px);margin-bottom:18px}.section-kicker{color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.card h2{font-size:1.45rem;line-height:1.25;margin:5px 0 10px}.muted{color:var(--muted)}.learning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.learning{background:#f7faff;border:1px solid #e3edf9;border-radius:14px;padding:14px}.learning .symbol{width:38px;height:38px;display:grid;place-items:center;background:#e4f0ff;color:var(--blue);border-radius:11px;font-size:1.15rem;margin-bottom:10px}.learning h3{font-size:.95rem;margin:0 0 5px}.learning p{font-size:.85rem;color:var(--muted);margin:0}.notice{padding:12px 14px;background:#fff8e7;border:1px solid #f6e5b7;border-radius:12px;color:#75551a;font-size:.88rem;margin-top:16px}.quiz-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.quiz-head h2{margin:4px 0}.quiz-meta{font-size:.86rem;color:var(--muted)}.progress{height:7px;background:#eaf0f7;border-radius:99px;overflow:hidden;margin:18px 0 22px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#1765bd,#55a5f4);transition:width .2s}.question{font-size:1.12rem;font-weight:750;margin:0 0 17px}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:white;text-align:left;color:var(--ink);width:100%;line-height:1.45}.option:hover{border-color:#8db8e8;background:#f8fbff}.option.selected{border-color:var(--blue);background:#edf5ff;box-shadow:0 0 0 2px #1557a012}.letter{flex:0 0 28px;height:28px;display:grid;place-items:center;border-radius:8px;background:#f0f4f8;color:#53667a;font-size:.83rem;font-weight:800}.option.selected .letter{background:var(--blue);color:white}.option.correct{border-color:#7ac6a0;background:#effaf4}.option.correct .letter{background:var(--green);color:white}.option.wrong{border-color:#e9a0a7;background:#fff3f4}.option.wrong .letter{background:var(--red);color:white}.feedback{margin-top:14px;padding:13px 15px;border-radius:12px;font-size:.92rem}.feedback.good{background:#edf9f2;color:#17623e}.feedback.bad{background:#fff1f2;color:#8e2934}.quiz-controls{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:20px}.control-group{display:flex;gap:9px}.tiny{font-size:.8rem;color:var(--muted)}.result-score{font-size:3.2rem;font-weight:850;letter-spacing:-.05em;color:var(--blue);line-height:1.1}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.stat{padding:14px;border:1px solid var(--line);background:#f8fbff;border-radius:13px}.stat strong{display:block;font-size:1.35rem}.stat span{font-size:.82rem;color:var(--muted)}.hidden{display:none!important}.field{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:11px;margin:7px 0 13px;outline:none}.field:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1557a018}.footer{text-align:center;padding:10px 15px 30px;color:var(--muted);font-size:.82rem}.review-row{border-top:1px solid var(--line);padding:13px 0}.review-row strong{display:block;margin-bottom:4px}.review-row .ok{color:var(--green)}.review-row .no{color:var(--red)}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.panel{position:static}.panel nav{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.nav-item{font-size:.78rem;display:block;text-align:center;padding:9px 5px}.nav-num{margin:0 auto 5px}.side-note{display:none}.learning-grid{grid-template-columns:1fr}.quiz-head{display:block}.result-grid{grid-template-columns:1fr 1fr}.topline{align-items:flex-start;flex-direction:column}.hero{padding-top:20px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="topline"><span>KHÔNG GIAN HỌC TẬP SỐ · TIN HỌC 11</span><span class="pill">Kết nối tri thức với cuộc sống</span></div>
+    <div class="hero">
+      <div class="eyebrow">Chủ đề 1 · Máy tính và xã hội tri thức</div>
+      <h1>Bài 5. Kết nối máy tính<br>với các thiết bị số</h1>
+      <p>Ôn tập kiến thức, thực hành tư duy và kiểm tra mức độ hiểu bài qua bộ câu hỏi tương tác.</p>
+      <div class="hero-actions"><button class="btn btn-white" id="heroStart">Bắt đầu làm bài →</button><button class="btn" style="background:#ffffff20;color:white;border:1px solid #ffffff55" id="heroLearn">Xem nội dung ôn tập</button></div>
+    </div>
+  </div>
+</header>
+<main class="main wrap">
+  <div class="layout">
+    <aside class="panel">
+      <h2>Nội dung học tập</h2>
+      <nav>
+        <div class="nav-item active" id="navOverview"><span class="nav-num">01</span> Ôn tập</div>
+        <div class="nav-item" id="navQuiz"><span class="nav-num">02</span> Làm bài</div>
+        <div class="nav-item" id="navResult"><span class="nav-num">03</span> Kết quả</div>
+      </nav>
+      <div class="side-note">Mẹo học tập<br>Đọc kỹ câu hỏi và cân nhắc chức năng của từng thiết bị trước khi chọn đáp án.</div>
+    </aside>
+    <section class="content">
+      <section class="card" id="overview">
+        <div class="section-kicker">Trước khi bắt đầu</div>
+        <h2>Nhớ nhanh kiến thức trọng tâm</h2>
+        <p class="muted">Bài học giúp nhận biết thiết bị vào – ra, đọc hiểu thông số cơ bản và lựa chọn cách kết nối phù hợp.</p>
+        <div class="learning-grid">
+          <article class="learning"><div class="symbol">⌨</div><h3>Thiết bị vào</h3><p>Bàn phím, chuột, camera, micro và máy quét giúp đưa dữ liệu vào máy tính.</p></article>
+          <article class="learning"><div class="symbol">▣</div><h3>Thiết bị ra</h3><p>Màn hình, máy in, máy chiếu và loa đưa thông tin từ máy tính tới người dùng.</p></article>
+          <article class="learning"><div class="symbol">⇄</div><h3>Kết nối thiết bị</h3><p>USB, HDMI, Bluetooth và Wi-Fi có đặc điểm, phạm vi sử dụng khác nhau.</p></article>
+        </div>
+        <div class="notice"><strong>Lưu ý:</strong> Một số thiết bị có thể vừa nhận vừa gửi dữ liệu. Khi kết nối, cần kiểm tra cổng tương thích, thiết lập phù hợp và trình điều khiển nếu cần.</div>
+        <div style="margin-top:20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <div style="flex:1;min-width:210px"><label for="studentName"><strong>Họ và tên học sinh</strong></label><input id="studentName" class="field" placeholder="Nhập họ tên (không bắt buộc)" maxlength="80"></div>
+          <div style="flex:1;min-width:170px"><label for="className"><strong>Lớp</strong></label><input id="className" class="field" placeholder="Ví dụ: 11A1" maxlength="20"></div>
+        </div>
+        <button class="btn btn-primary" id="startQuiz">Vào bài kiểm tra →</button>
+        <p class="tiny" style="margin-bottom:0">Bài làm chạy trên trình duyệt. Phiên bản mẫu chưa gửi kết quả về giáo viên hoặc lưu điểm tập trung.</p>
+      </section>
+      <section class="card hidden" id="quiz">
+        <div class="quiz-head"><div><div class="section-kicker">Bài kiểm tra tương tác</div><h2 id="quizTitle">Câu hỏi 1</h2><div class="quiz-meta" id="quizMeta">Chọn một đáp án đúng nhất.</div></div><div class="pill" style="color:var(--blue);border-color:var(--line);white-space:nowrap" id="counter">1 / 15</div></div>
+        <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="question" id="questionText"></p>
+        <div class="options" id="options"></div>
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+        <div class="quiz-controls"><div class="control-group"><button class="btn btn-ghost" id="prevBtn">← Câu trước</button><button class="btn btn-ghost" id="nextBtn">Câu tiếp →</button></div><button class="btn btn-primary" id="submitBtn">Nộp bài</button></div>
+        <p class="tiny" id="answeredText" style="margin-bottom:0"></p>
+      </section>
+      <section class="card hidden" id="result">
+        <div class="section-kicker">Hoàn thành bài kiểm tra</div><h2>Kết quả của bạn</h2>
+        <p class="muted" id="resultGreeting">Bạn đã hoàn thành bài làm.</p>
+        <div class="result-score" id="score">0/15</div><p class="muted" id="scorePercent">0%</p>
+        <div class="result-grid"><div class="stat"><strong id="correctCount">0</strong><span>Câu trả lời đúng</span></div><div class="stat"><strong id="wrongCount">0</strong><span>Câu chưa chính xác</span></div><div class="stat"><strong id="answeredCount">0</strong><span>Câu đã trả lời</span></div></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" id="reviewBtn">Xem lại đáp án</button><button class="btn btn-ghost" id="retryBtn">Làm lại bài</button><button class="btn btn-ghost" id="printBtn">In kết quả</button></div>
+        <div id="review" class="hidden" style="margin-top:20px"><h3>Đối chiếu đáp án</h3><div id="reviewList"></div></div>
+      </section>
+    </section>
+  </div>
+</main>
+<footer class="footer">TIN HỌC 11 · BÀI 5 · Học tập chủ động, kết nối thông minh</footer>
+<script>
+const questionBank = [
+ {q:"Thiết bị nào sau đây thường được dùng để nhập văn bản vào máy tính?",a:["Máy chiếu","Bàn phím","Loa","Máy in"],c:1,e:"Bàn phím là thiết bị vào, dùng để nhập chữ, số và các lệnh vào máy tính."},
+ {q:"Thiết bị nào sau đây chủ yếu là thiết bị ra?",a:["Micro","Chuột","Máy quét","Máy chiếu"],c:3,e:"Máy chiếu nhận tín hiệu từ máy tính và hiển thị hình ảnh lên màn chiếu."},
+ {q:"Điểm khác biệt cơ bản giữa VGA và HDMI là gì?",a:["VGA truyền tín hiệu tương tự; HDMI truyền tín hiệu số","VGA luôn truyền cả hình ảnh và âm thanh; HDMI chỉ truyền hình ảnh","HDMI chỉ dùng để kết nối mạng","VGA là công nghệ kết nối không dây"],c:0,e:"VGA truyền tín hiệu hình ảnh dạng tương tự; HDMI truyền tín hiệu số và có thể truyền đồng thời hình ảnh, âm thanh."},
+ {q:"Khi kết nối điện thoại với máy tính qua USB để sao chép ảnh, điều gì có thể cần thực hiện trên điện thoại?",a:["Bật chế độ máy bay","Chọn chế độ truyền tệp hoặc cho phép truy cập dữ liệu","Tắt màn hình vĩnh viễn","Xóa toàn bộ ảnh"],c:1,e:"Tùy thiết bị, cần mở khóa điện thoại và chọn chế độ truyền tệp/cho phép truy cập dữ liệu."},
+ {q:"Bluetooth thường phù hợp nhất với tình huống nào?",a:["Kết nối tai nghe không dây ở khoảng cách gần","Kết nối máy tính với Internet trên toàn cầu mà không cần thiết bị trung gian","Truyền tín hiệu truyền hình qua cáp đồng trục","In tài liệu bằng giấy"],c:0,e:"Bluetooth thường dùng cho kết nối không dây tầm ngắn, chẳng hạn tai nghe, loa, bàn phím."},
+ {q:"Thông số DPI của chuột thường liên quan đến điều gì?",a:["Dung lượng pin","Độ phân giải/độ nhạy di chuyển của chuột","Số trang in mỗi phút","Kích thước màn hình"],c:1,e:"DPI của chuột thể hiện số chấm trên mỗi inch chuyển động, thường được dùng để mô tả độ nhạy."},
+ {q:"Tốc độ in của máy in thường được biểu thị bằng đơn vị nào?",a:["Trang/phút (ppm)","Pixel/giây","Gigabyte/giờ","Hertz/centimet"],c:0,e:"Tốc độ in thường được công bố theo số trang mỗi phút (ppm), tùy chuẩn đo và chế độ in."},
+ {q:"Độ phân giải màn hình thường được biểu diễn bằng cách nào?",a:["Số trang mỗi phút","Số lõi CPU","Số điểm ảnh theo chiều ngang × chiều dọc","Dung lượng ổ cứng"],c:2,e:"Ví dụ 1920 × 1080 biểu thị số điểm ảnh theo chiều ngang và chiều dọc."},
+ {q:"Khi máy tính kết nối với máy in qua cáp nhưng không in được, bước kiểm tra hợp lý là gì?",a:["Thay đổi hình nền máy tính","Kiểm tra cáp/cổng kết nối, nguồn máy in và trình điều khiển","Xóa trình duyệt web","Tắt bàn phím"],c:1,e:"Cần kiểm tra nguồn, cáp/cổng kết nối, hàng đợi in và trình điều khiển phù hợp."},
+ {q:"Thiết bị nào có thể vừa nhận dữ liệu từ máy tính vừa gửi dữ liệu vào máy tính?",a:["Bộ nhớ ngoài kết nối USB","Máy chiếu thông thường","Loa thụ động","Màn chiếu"],c:0,e:"Bộ nhớ ngoài có thể nhận tệp khi ghi dữ liệu và gửi tệp khi đọc dữ liệu."},
+ {q:"HDMI thường được sử dụng để kết nối máy tính với thiết bị nào?",a:["Màn hình hoặc máy chiếu","Chuột cơ có dây PS/2 בלבד","Thẻ SIM","Bàn học"],c:0,e:"HDMI thường truyền hình ảnh và âm thanh tới màn hình, TV hoặc máy chiếu có cổng tương thích."},
+ {q:"Vì sao cần cài đặt trình điều khiển (driver) cho một số thiết bị ngoại vi?",a:["Để tăng kích thước màn hình vật lý","Để hệ điều hành giao tiếp và điều khiển thiết bị đúng cách","Để tự động tăng dung lượng RAM","Để thay đổi chuẩn cắm của cáp"],c:1,e:"Trình điều khiển giúp hệ điều hành nhận biết và làm việc với thiết bị phần cứng."},
+ {q:"Máy quét ảnh (scanner) thường được xếp vào nhóm nào?",a:["Thiết bị vào","Thiết bị ra","Thiết bị chỉ phát âm thanh","Thiết bị hiển thị hình ảnh"],c:0,e:"Máy quét chuyển tài liệu hoặc hình ảnh vật lý thành dữ liệu số đưa vào máy tính."},
+ {q:"Khi dùng TV làm màn hình mở rộng cho máy tính, tính năng nào của hệ điều hành thường cần thiết lập?",a:["Chế độ trình chiếu/mở rộng màn hình","Chế độ gõ tiếng Việt","Cài đặt âm báo bàn phím","Lịch sử duyệt web"],c:0,e:"Trong cài đặt hiển thị, người dùng có thể chọn nhân bản hoặc mở rộng màn hình tùy nhu cầu."},
+ {q:"Khi chọn cách kết nối một thiết bị số, điều nào nên được ưu tiên kiểm tra?",a:["Màu sắc của thiết bị","Khả năng tương thích cổng/giao thức và nhu cầu sử dụng","Tên người bán","Hình nền máy tính"],c:1,e:"Cần kiểm tra chuẩn kết nối tương thích, khả năng của thiết bị và mục đích sử dụng."}
+];
+let questions = [], answers = [], current = 0, submitted = false;
+const $ = id => document.getElementById(id);
+function showSection(name){
+ ["overview","quiz","result"].forEach(id=>$(id).classList.toggle("hidden",id!==name));
+ ["navOverview","navQuiz","navResult"].forEach((id,i)=>$(id).classList.toggle("active",["overview","quiz","result"][i]===name));
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function start(){
+ questions=[...questionBank]; answers=Array(questions.length).fill(null); current=0; submitted=false;
+ $("review").classList.add("hidden"); showSection("quiz"); renderQuestion();
+}
+function renderQuestion(){
+ const q=questions[current]; $("quizTitle").textContent=`Câu hỏi ${current+1}`; $("counter").textContent=`${current+1} / ${questions.length}`;
+ $("progressFill").style.width=`${((current+1)/questions.length)*100}%`; $("questionText").textContent=q.q;
+ $("options").innerHTML=""; $("feedback").className="feedback hidden"; $("feedback").textContent="";
+ q.a.forEach((label,i)=>{
+  const b=document.createElement("button"); b.className="option"; b.type="button";
+  if(answers[current]===i)b.classList.add("selected");
+  if(submitted&&i===q.c)b.classList.add("correct");
+  if(submitted&&answers[current]===i&&i!==q.c)b.classList.add("wrong");
+  const letter=document.createElement("span");letter.className="letter";letter.textContent=String.fromCharCode(65+i);
+  const text=document.createElement("span");text.textContent=label;b.append(letter,text);
+  b.disabled=submitted;b.addEventListener("click",()=>{answers[current]=i;renderQuestion()});$("options").appendChild(b);
+ });
+ if(submitted){$("feedback").className="feedback "+(answers[current]===q.c?"good":"bad");$("feedback").textContent=(answers[current]===q.c?"Chính xác! ":"Chưa chính xác. ")+q.e;}
+ $("prevBtn").disabled=current===0||submitted;$("nextBtn").disabled=current===questions.length-1||submitted;
+ $("submitBtn").textContent=submitted?"Đã nộp bài":"Nộp bài";$("submitBtn").disabled=submitted;
+ $("answeredText").textContent=`Đã chọn ${answers.filter(a=>a!==null).length}/${questions.length} câu.`;
+}
+function submit(){
+ if(submitted)return;
+ const unanswered=answers.filter(a=>a===null).length;
+ if(unanswered && !confirm(`Bạn còn ${unanswered} câu chưa trả lời. Vẫn nộp bài?`))return;
+ submitted=true;const correct=questions.reduce((n,q,i)=>n+(answers[i]===q.c?1:0),0);
+ $("resultGreeting").textContent=`${$("studentName").value.trim()||"Bạn"}${$("className").value.trim()?" · Lớp "+$("className").value.trim():""}, bạn đã hoàn thành bài kiểm tra.`;
+ $("score").textContent=`${correct}/${questions.length}`;$("scorePercent").textContent=`Đạt ${(correct/questions.length*100).toFixed(1).replace(".",",")}% số điểm tối đa`;
+ $("correctCount").textContent=correct;$("wrongCount").textContent=questions.length-correct;$("answeredCount").textContent=answers.filter(a=>a!==null).length;
+ showSection("result");renderQuestion();buildReview();
+}
+function buildReview(){
+ $("reviewList").innerHTML="";
+ questions.forEach((q,i)=>{const d=document.createElement("div");d.className="review-row";
+ const title=document.createElement("strong");title.textContent=`Câu ${i+1}. ${q.q}`;
+ const ans=document.createElement("div");ans.className=answers[i]===q.c?"ok":"no";
+ ans.textContent=`Bạn chọn: ${answers[i]===null?"Chưa trả lời":String.fromCharCode(65+answers[i])+". "+q.a[answers[i]]}`;
+ const correct=document.createElement("div");correct.textContent=`Đáp án đúng: ${String.fromCharCode(65+q.c)}. ${q.a[q.c]}`;
+ const exp=document.createElement("div");exp.className="muted";exp.textContent=q.e;
+ d.append(title,ans,correct,exp);$("reviewList").appendChild(d);
+ });
+}
+$("heroStart").onclick=()=>{showSection("overview");$("studentName").focus();};
+$("heroLearn").onclick=()=>{showSection("overview");$("overview").scrollIntoView({behavior:"smooth"});};
+$("startQuiz").onclick=start;$("navOverview").onclick=()=>showSection("overview");$("navQuiz").onclick=()=>{if(!questions.length)start();else showSection("quiz")};$("navResult").onclick=()=>{if(submitted)showSection("result");else alert("Bạn hãy hoàn thành bài kiểm tra để xem kết quả.");};
+$("prevBtn").onclick=()=>{if(current>0){current--;renderQuestion()}};
+$("nextBtn").onclick=()=>{if(current<questions.length-1){current++;renderQuestion()}};
+$("submitBtn").onclick=submit;
+$("reviewBtn").onclick=()=>{$("review").classList.toggle("hidden");$("reviewBtn").textContent=$("review").classList.contains("hidden")?"Xem lại đáp án":"Ẩn phần đáp án";};
+$("retryBtn").onclick=start;$("printBtn").onclick=()=>window.print();
+</script>
+</body>
+</html>
